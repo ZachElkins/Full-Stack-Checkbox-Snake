@@ -1,0 +1,23 @@
+#game-over-modal {
+    color: black;
+}
+
+.modal-content {
+    background-color: var(--bg);
+}
+
+
+.modal-header {
+    justify-content: center;
+    /* width: 100%; */
+    font-size: 2rem;
+}
+
+.modal-footer {
+    justify-content: center;
+}
+
+#player-name {
+    background-color: var(--active-bg);
+    border: none;
+}

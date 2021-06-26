@@ -1,0 +1,51 @@
+:root {
+  --cols: 40;
+}
+
+#grid {
+  background-color: var(--bg);
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  width: max-content;
+  margin-bottom: 20px;
+}
+
+.btn-secondary, .btn-secondary:visited {
+  background-color: #dfdfdf;
+  color: #888
+}
+
+.btn-secondary:hover {
+  background-color: #a0a0a0;
+}
+
+.btn-secondary:active {
+  background-color: #909090;
+}
+
+.start-timer {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.score {
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  .checkbox {
+    /* width: 5px */
+  }
+  #grid {
+    width: 500px;
+    grid-auto-rows: 12.5px;
+    padding: 5px 10px 7px 5px;
+  }
+  
+}

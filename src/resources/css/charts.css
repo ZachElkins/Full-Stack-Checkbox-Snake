@@ -1,0 +1,63 @@
+
+.data {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.chart-container {
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.scores {
+    margin: 0 auto;
+    width: 80%;
+}
+
+tr {
+    border-bottom: .125px solid rgba(50, 50, 50, 0.5);
+}
+
+.scores tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.226);
+}
+
+.scores tr:nth-child(1) th {
+    color: rgb(233, 207, 62);
+}
+
+.scores tr:nth-child(2) td {
+    color: rgb(231, 81, 81);
+}
+
+#card-container {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    display: block;
+    margin: 10px;
+    padding: 10px 10px 10px 0px;
+    text-align: center;
+    background-color: var(--txt);
+}
+
+
+#highScore-user {
+    size: .5em;
+    color: var(--active-txt);
+}
+
+.card-title {
+    color: var(--bg);
+}
+
+.card-body {
+    color: var(--active-txt);
+}

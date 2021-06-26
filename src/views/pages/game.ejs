@@ -1,0 +1,38 @@
+<%- include('../partials/header') -%>
+
+<div class="header">
+    <h1>Checkbox Snake</h1>
+</div>
+<div class="container" id="grid">
+</div>
+
+<div class="controls">
+    <div class="rb-group">
+        <div class="rb game-difficulty"  name="difficulty-selector" id="easy"  data-value="10" data-toggle="tooltip" title="Nice and slow. Wrapping borders.">
+            <div class="rb-bg">
+                <span class="rb-text">Easy</span>
+            </div>
+        </div>
+        <div class="rb rb-active game-difficulty" name="difficulty-selector" id="medium" data-value="20" data-toggle="tooltip" title="Twice as fast as easy. Wrapping borders.">
+            <div class="rb-bg">
+                <span class="rb-text">Medium</span>
+            </div>
+        </div>
+        <div class="rb game-difficulty" name="difficulty-selector" id="hard" data-value="40" data-toggle="tooltip" title="Twice as fast as medium. Solid borders.">
+            <div class="rb-bg">
+                <span class="rb-text">Hard</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="start-timer">
+    <input type="button" value="Start" class="btn btn-secondary" onclick="startGame()" id="start-btn">
+    <input type="button" value="Stop" class="btn btn-secondary" onclick="stopGame(false)" id="stop-btn">
+    <span id="timer">00:00</span>
+</div>
+<div class="score">
+    <p>Score: <span id="game-score">0</span></p>
+</div>
+
+<%- include('../partials/game-over-modal') -%>
+<%- include('../partials/footer') -%>

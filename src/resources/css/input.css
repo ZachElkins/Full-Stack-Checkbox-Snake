@@ -1,0 +1,44 @@
+.rb-txt {
+    font-family: sans-serif;
+    font-size: 2em;
+}
+
+.rb-group {
+    padding: 7px;
+    margin: 0 auto;
+    width: 500px;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: .5em;
+
+    text-align: center;
+}
+
+.rb {
+    display: inline-block;
+    width: 33%;
+}
+
+.rb-bg {
+    cursor: pointer;
+    color: var(--txt);
+
+    padding: 5px 2px 5px 2px;
+    margin: 0px;
+
+    border: 2px solid transparent;
+    border-radius: .5em;
+
+    transition: ease 350ms;
+}
+
+
+.rb-active .rb-bg {
+    color: var(--active-txt);
+    background: var(--active-bg);
+    box-shadow: 1px 2px 5px var(--shadow);
+}

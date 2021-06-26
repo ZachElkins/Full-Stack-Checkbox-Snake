@@ -1,0 +1,100 @@
+<%- include('../partials/header') -%>
+
+<div class="header">
+    <h1>High Scores</h1>
+</div>
+<!-- <div> -->
+    <table class="scores">
+        <tr>
+            <th>Rank</th>
+            <th>Score</th>
+            <th>Name</th>
+            <th>Difficulty</th>
+        </tr>
+        
+    <% let display = '' %>
+    <% let rank = 1 %>
+    <% top10Scores.forEach(player => { %>
+        <% display += `<td>${rank}</td><td>${player.score}</td><td>${player.player}</td><td>${player.difficulty}</td></tr>`; %>
+        <% rank++; %>
+    <% }); %>
+    <%- display -%>
+    </table>
+    
+    <br>
+
+    <div class="rb-group">
+        <div class="rb chart-difficulty" data-value="easy">
+            <div class="rb-bg">
+                <span class="rb-text">Easy</span>
+            </div>
+        </div>
+        <div class="rb rb-active chart-difficulty" data-value="medium">
+            <div class="rb-bg">
+                <span class="rb-text">Medium</span>
+            </div>
+        </div>
+        <div class="rb chart-difficulty" data-value="hard">
+            <div class="rb-bg">
+                <span class="rb-text">Hard</span>
+            </div>
+        </div>
+    </div>
+
+<div class="data">
+    <div class="chart-container">
+        <canvas id="chart"></canvas>
+    </div>
+
+    <br>
+    <div id="card-container">
+        <div class="card" style="width: 18rem;">
+            <div class="card-title">
+                <h2 id="avgScore-title">Average Score</h2>
+            </div>
+            <div class="card-body">
+                <h1 class="data-point" id="avgScore">25</h1>
+            </div>
+            </div>
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-title">
+                <h2 id="highScore-title">Highest Score</h2><small id="highScore-user"></small>
+            </div>
+            <div class="card-body">
+                <h1 class="data-point" id="highScore">25</h1>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-title">
+                <h2 id="avgTime-title">Average Time</h2>
+            </div>
+            <div class="card-body">
+                <h1 class="data-point" id="avgTime">25</h1>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-title">
+                <h2 id="avgMoves-title">Average Moves</h2>
+            </div>
+            <div class="card-body">
+                <h1 class="data-point" id="avgMoves">25</h1>
+            </div>
+        </div>
+
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-title">
+                <h2 id="gamesPlayed-title">Games Played</h2>
+            </div>
+            <div class="card-body">
+                <h1 class="data-point" id="gamesPlayed">25</h1>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+<%- include('../partials/footer') -%>

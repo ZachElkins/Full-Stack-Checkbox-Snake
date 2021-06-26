@@ -1,0 +1,47 @@
+<style>
+    @import url('../../resources/css/modal-style.css');
+</style>
+
+<div class="modal fade" id="game-over-modal" tabindex="-1," role="dialog" aria-labelledby="game-over-modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form action="/add_score" class="modal-content" method="post">
+            <div class="modal-header">
+                Game Over
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="player-name">Name</label>
+                    <input type="text" id="player-name" name="player" class="modal-input form-control" maxlength="16" placeholder="Name (16 Char Max)" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="score-display">Score: </label>
+                    <span id="score-display">0</span>
+                    <input id="score" type="number" name="score" class="form-control" value="0" hidden>
+                </div>
+    
+                <div class="form-group">
+                    <label for="moves-display">Moves: </label>
+                    <span id="moves-display">0</span>
+                    <input id="moves" type="number" name="moves" class="form-control" value="0" hidden>
+                </div>
+
+                <div class="form-group">
+                    <label for="moves-display">Difficulty: </label>
+                    <span id="difficulty-display">Medium</span>
+                    <input id="difficulty" type="text" name="difficulty" class="form-control" value="medium" hidden>
+                </div>
+
+                <div class="form-group">
+                    <label for="moves-display">Time: </label>
+                    <span id="time-display">00:00</span>
+                    <input id="time" type="number" name="time" class="form-control" value="0" hidden>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="button" value="Cancel" class="btn btn-secondary" data-dismiss="modal">
+                <input type="submit" value="Submit Score" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+</div>
