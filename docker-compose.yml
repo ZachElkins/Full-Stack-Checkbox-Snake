@@ -18,9 +18,11 @@ services:
   db:
     build: ./db
     env_file: .env
+    expose:
+      - "5432"
     volumes:
       - ./db/init_data/:/docker-entrypoint-initdb.d
-      - snake-db:/var/lib/postgresql/data  
+      - snake-db:/var/lib/postgresql/data
 
   web:
     build: 
@@ -28,7 +30,7 @@ services:
       dockerfile: Dockerfile
       target: devapp
     depends_on:
-      - db                                      
+      - db
     env_file: .env
     ports:
         - "3000:3000" 

@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const { db } = require('./dbConfig');
-const { reset } = require('nodemon');
-const { errors } = require('pg-promise');
+// const { reset } = require('nodemon');
+// const { errors } = require('pg-promise');
 // const flash = require('express-flash');
 
 app.use(bodyParser.json());

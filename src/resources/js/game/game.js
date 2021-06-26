@@ -29,6 +29,7 @@ function reset() {
 }
 
 function startGame() {
+    snake = [[0, 3], [0, 2], [0, 1], [0, 0]];
     $("#start-btn").hide();
     $("#stop-btn").show();
     
@@ -48,6 +49,7 @@ function stopGame(loss) {
 
     if (loss) {
         openModal();
+        snake = [];
     }
     pauseGame(true);
     reset();
@@ -116,6 +118,13 @@ function setDir(newDir) {
 
 function move() {
     let newHead = [snake[0][0]+dir[0], snake[0][1]+dir[1]];
+
+    if (difficulty == 'hard') {
+        if (newHead[0] < 0 || newHead[0] >= COLS ||
+            newHead[1] < 0 || newHead[1] >= ROWS) {
+                stopGame(true);
+            }
+    }
 
     if (looping) {
         if (newHead[0] >= ROWS) {
