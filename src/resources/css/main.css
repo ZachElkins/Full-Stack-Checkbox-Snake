@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
-    --background-color: #292e33;
+    /* --background-color: #292e33; */
+    --background-color: #b2b9c0;
     --header-color: #fafafa;
 
     /* Difficulty input */

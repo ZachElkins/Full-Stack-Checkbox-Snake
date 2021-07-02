@@ -1,37 +1,60 @@
 
+:root {
+    --table-header-txt: rgb(233, 207, 62);
+    --table-bg-one: rgba(136, 136, 136, 0.54);
+    --table-bg-two: rgba(50, 50, 50, 0.35);
+    --best-score-txt: rgb(231, 81, 81);
+    --table-border: rgba(50, 50, 50, 0.5);
+}
+
 .data {
     width: 100%;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
 }
 
 .chart-container {
-    width: 70vw;
+    width: 90%;
     margin: 0 auto;
+    margin-top: 30px;
+    background-color: var(--background-color);
+    border-radius: 5px;
 }
 
 .scores {
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
+    border: 1px solid var(--table-border);
+}
+
+td, th {
+    padding: 5px 25px;
 }
 
 tr {
-    border-bottom: .125px solid rgba(50, 50, 50, 0.5);
+    border-bottom: .125px solid var(--table-border);
+}
+
+.scores tr:nth-child(odd) td {
+    background-color: var(--table-bg-one);
 }
 
 .scores tr:nth-child(even) td {
-    background-color: rgba(255, 255, 255, 0.226);
+    background-color: var(--table-bg-two);
 }
 
 .scores tr:nth-child(1) th {
-    color: rgb(233, 207, 62);
+    color: var(--txt);
+    /* color: var(--table-header-txt); */
 }
 
 .scores tr:nth-child(2) td {
-    color: rgb(231, 81, 81);
+    color: var(--active-txt);
 }
 
 #card-container {
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     /* flex-direction: row; */
@@ -45,7 +68,7 @@ tr {
     margin: 10px;
     padding: 10px 10px 10px 0px;
     text-align: center;
-    background-color: var(--txt);
+    background-color: rgba(255, 255, 255, 0.226);
 }
 
 
