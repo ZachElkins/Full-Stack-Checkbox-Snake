@@ -8,24 +8,33 @@
 }
 
 .data {
-    width: 100%;
     margin: 0 auto;
+    width: 95%;
     display: grid;
     grid-template-columns: 1fr 3fr;
+    column-gap: 20px;
+}
+
+.grid-item {
+    box-shadow: 3px 5px 15px var(--table-bg-one);
+    border-radius: 10px;
 }
 
 .chart-container {
     width: 90%;
-    margin: 0 auto;
     margin-top: 30px;
     background-color: var(--background-color);
     border-radius: 5px;
+    text-align: center;
+}
+
+#cards-header {
+    text-align: center;
 }
 
 .scores {
-    margin: 0 auto;
     width: 90%;
-    border: 1px solid var(--table-border);
+    border-radius: 10px;
 }
 
 td, th {
@@ -33,7 +42,8 @@ td, th {
 }
 
 tr {
-    border-bottom: .125px solid var(--table-border);
+    /* border-bottom: .125px solid var(--table-border); */
+    background: none;
 }
 
 .scores tr:nth-child(odd) td {
@@ -57,10 +67,11 @@ tr {
     width: 100%;
     margin: 0 auto;
     display: flex;
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
     flex-flow: row wrap;
     justify-content: space-evenly;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 .card {
