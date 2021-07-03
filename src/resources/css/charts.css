@@ -5,6 +5,7 @@
     --table-bg-two: rgba(50, 50, 50, 0.35);
     --best-score-txt: rgb(231, 81, 81);
     --table-border: rgba(50, 50, 50, 0.5);
+    --box-shadow: rgba(50, 50, 50, 0.35);
 }
 
 .data {
@@ -16,7 +17,7 @@
 }
 
 .grid-item {
-    box-shadow: 3px 5px 15px var(--table-bg-one);
+    box-shadow: 3px 5px 15px var(--box-shadow);
     border-radius: 10px;
 }
 
@@ -28,14 +29,20 @@
     text-align: center;
 }
 
-#cards-header {
-    text-align: center;
-}
-
+/* HIGH SCORE TABLE */
 .scores {
+    /* border-collapse: separate; */
     width: 90%;
     border-radius: 10px;
+    background: transparent;
 }
+
+.scores tr:nth-child(odd) td { background-color: var(--table-bg-one); }
+.scores tr:nth-child(even) td { background-color: var(--table-bg-two); }
+.scores tr:nth-child(1) th { color: var(--txt); }
+.scores tr:nth-child(2) td { color: var(--active-txt); }
+.scores tr:last-child td:first-child { border-radius: 0 0 0 10px; }
+.scores tr:last-child td:last-child { border-radius: 0 0 10px 0; }
 
 td, th {
     padding: 5px 25px;
@@ -46,21 +53,9 @@ tr {
     background: none;
 }
 
-.scores tr:nth-child(odd) td {
-    background-color: var(--table-bg-one);
-}
-
-.scores tr:nth-child(even) td {
-    background-color: var(--table-bg-two);
-}
-
-.scores tr:nth-child(1) th {
-    color: var(--txt);
-    /* color: var(--table-header-txt); */
-}
-
-.scores tr:nth-child(2) td {
-    color: var(--active-txt);
+/* DATA CARDS  */
+#cards-header {
+    text-align: center;
 }
 
 #card-container {
