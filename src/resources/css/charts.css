@@ -8,11 +8,12 @@
     --box-shadow: rgba(50, 50, 50, 0.35);
 }
 
+/* GENERAL STYLE */
 .data {
     margin: 0 auto;
     width: 95%;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 2fr 5fr;
     column-gap: 20px;
 }
 
@@ -21,9 +22,10 @@
     border-radius: 10px;
 }
 
+/* CHART.JS */
+
 .chart-container {
     width: 90%;
-    margin-top: 30px;
     background-color: var(--background-color);
     border-radius: 5px;
     text-align: center;
@@ -44,49 +46,52 @@
 .scores tr:last-child td:first-child { border-radius: 0 0 0 10px; }
 .scores tr:last-child td:last-child { border-radius: 0 0 10px 0; }
 
-td, th {
-    padding: 5px 25px;
-}
+td, th { padding: 5px 25px; }
 
-tr {
-    /* border-bottom: .125px solid var(--table-border); */
-    background: none;
+tr { 
+    background: none; 
+    color: var(--bright-text);
 }
 
 /* DATA CARDS  */
+#card-container {
+    padding: 25px 10px 0px 10px;
+    text-align: center;
+}
+
 #cards-header {
     text-align: center;
-}
-
-#card-container {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    padding-top: 25px;
-    padding-bottom: 25px;
     margin-bottom: 25px;
+    color: var(--header-color);
 }
 
-.card {
+.data-card {
     display: block;
-    margin: 10px;
-    padding: 10px 10px 10px 0px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.226);
+    background: none;
+    border: none;
+    margin-bottom: 50px;
+    border-bottom: 2px solid var(--table-bg-two);
+    padding-bottom: 5px;
+    display: inline-block;
 }
 
-
-#highScore-user {
-    size: .5em;
-    color: var(--active-txt);
+.data-card > h2 {
+    color: var(--txt);
+    font-size: 1em; 
+    display: inline-block;
 }
 
-.card-title {
-    color: var(--bg);
+.data-card > p { 
+    color: var(--bright-text);
+    margin-bottom: 0px;
+    display: inline-block;
 }
 
 .card-body {
+    color: var(--active-txt);
+}
+
+#highScore-user {
+    size: .5em;
     color: var(--active-txt);
 }

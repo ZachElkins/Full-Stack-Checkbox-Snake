@@ -29,6 +29,7 @@
   margin-top: 10px;
   width: 100%;
   text-align: center;
+  color: var(--bright-text);
 }
 
 .score {
@@ -36,6 +37,7 @@
   margin-top: 10px;
   text-align: center;
   font-size: 20px;
+  color: var(--bright-text);
 }
 
 @media only screen and (max-width: 800px) {

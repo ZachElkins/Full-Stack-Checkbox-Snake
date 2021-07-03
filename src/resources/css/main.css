@@ -4,6 +4,7 @@
     /* --background-color: #292e33; */
     --background-color: #b2b9c0;
     --header-color: #fafafa;
+    --bright-text: #ddd;
 
     /* Difficulty input */
     --border: rgba(0, 0, 0, .5);
@@ -11,14 +12,13 @@
     --txt: rgba(125, 125, 125, 1);
     --active-bg: rgba(255, 255, 255, 1);
     --active-txt: rgb(84, 162, 235, 1);
-    --shadow: rgba(150, 150, 150, 0.25);   
+    --shadow: rgba(150, 150, 150, 0.25);
 }
 
 body {
   background-color: var(--background-color);
   font-family: 'Press Start 2P', cursive;
   padding-top: 20px;
-  color: #ddd;
   padding: 0px;
   margin: 0;
 }
