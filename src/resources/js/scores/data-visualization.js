@@ -99,6 +99,7 @@ function updateData(diff) {
         // console.log(response.statusText);
         // console.log(response.headers);
         // console.log(response.config);
+        $("#cards-header").html(`${diff} difficulty data`);
         updateChart(response.data.scores, diff);
         updateCards(response.data.avgs[0], response.data.highScore[0], response.data.gamesPlayed[0].games_played);
     });
